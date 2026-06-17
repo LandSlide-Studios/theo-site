@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Theo</title>
+<meta name="description" content="Privacy Policy for Theo, the Bible, prayer & focus app by Landslide Studios LLC.">
+<style>
+  :root { --ink:#1c2530; --muted:#5b6876; --accent:#2f6f8f; --bg:#f7f9fb; --card:#ffffff; --line:#e6ecf1; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:1.8rem; margin:.2em 0; }
+  h2 { font-size:1.25rem; margin:1.8em 0 .3em; padding-top:.4em; border-top:1px solid var(--line); }
+  h3 { font-size:1.05rem; margin:1.1em 0 .2em; }
+  .meta { color:var(--muted); font-size:.95rem; margin:.2em 0 1.2em; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  table { width:100%; border-collapse:collapse; margin:.6em 0; font-size:.95rem; }
+  th,td { text-align:left; border:1px solid var(--line); padding:8px 10px; vertical-align:top; }
+  th { background:#eef3f7; }
+  ul { padding-left:1.2em; } li { margin:.25em 0; }
+  code { background:#eef3f7; padding:1px 5px; border-radius:5px; font-size:.9em; }
+  .back { display:inline-block; margin-bottom:14px; }
+  footer { color:var(--muted); font-size:.9rem; margin-top:40px; border-top:1px solid var(--line); padding-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="index.html">← Theo Support</a>
+<h1>Privacy Policy</h1>
+<p class="meta">App: Theo · Provider: Landslide Studios LLC · Effective June 17, 2026 · Last updated June 17, 2026 · Contact: <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a></p>
+
+<h2>1. Overview</h2>
+<p>Theo is a faith and focus app. It combines daily Bible reading, journaling, an AI Scripture companion ("Theo"), optional friends/groups/church community features, fasting tracking, and a Screen Time–based focus tool that blocks distracting apps during study sessions. Our design favors <strong>data minimization</strong>:</p>
+<ul>
+  <li><strong>Analytics never carry your written content.</strong> Our analytics layer is structurally limited to non-content metadata (IDs, counts, enum values, booleans).</li>
+  <li><strong>We do not track you</strong> across other companies' apps or websites. The app declares no tracking.</li>
+  <li><strong>We do not use your content to train AI models.</strong></li>
+  <li><strong>The app cannot see which apps you choose to block</strong> — Apple's Screen Time framework gives us only opaque tokens, never app names (see §6).</li>
+</ul>
+
+<h2>2. Data we collect or process</h2>
+<h3>2.1 Account &amp; identity</h3>
+<p>You can use much of the app without an account. To enable cloud features (friends, groups, cross-device subscription, journal sync) you sign in with <strong>Sign in with Apple</strong> or <strong>Google Sign-In</strong> via our auth provider (Supabase). We receive an OAuth identity token and your account is keyed by a user ID (UUID). Apple or Google may pass an <strong>email address</strong> to the auth provider as part of the standard OAuth exchange (with Sign in with Apple you may use Apple's private relay email). We do <strong>not</strong> collect a password.</p>
+<h3>2.2 Profile</h3>
+<p>Username, display name, optional avatar and bio, optional church association, and your privacy-preference flags (visibility of streak/plan/fasting to friends, searchable-by-username, opt-in to the public church leaderboard).</p>
+<h3>2.3 Journals</h3>
+<p>Your written journal entries and timestamps, with a <strong>per-entry privacy setting</strong>: <em>private</em> (owner-only, never leaves your row), <em>Theo can read</em> (visible only to you, but the AI may reference it in chat), or <em>shared to group</em> (only a short excerpt you write yourself is posted; the underlying entry is never read by the group). For entries you mark "Theo can read," a server-side vector embedding powers retrieval; it is never readable by the client and is excluded from your data export.</p>
+<h3>2.4 AI chat ("Theo") content</h3>
+<ul>
+  <li>Your message text and recent conversation history are sent to our AI backend to generate a reply.</li>
+  <li>Conversation history is stored <strong>locally on your device</strong>, not in our cloud database.</li>
+  <li><strong>Cross-conversation "memories":</strong> the backend may extract short personal facts to personalize future chats, stored with a <strong>180-day</strong> expiry.</li>
+  <li><strong>Chat feedback:</strong> if you rate a reply (thumbs up/down), that message and reply are stored with a <strong>90-day</strong> expiry for quality review.</li>
+  <li><strong>We do not use your chat content to train or fine-tune AI models.</strong></li>
+</ul>
+<h3>2.5 Social graph</h3>
+<p>Friend requests/friendships (the two user IDs + status), groups/churches (name, description, membership, role, invite codes), group-feed posts you choose to share, and your block list (a blocked person can never learn they were blocked).</p>
+<h3>2.6 Streaks &amp; progress</h3>
+<p>Your reading/fasting streak counters and last-activity dates are mirrored to the cloud so friends and group leaderboards can show them according to your privacy settings.</p>
+<h3>2.7 Subscriptions</h3>
+<p>When you purchase a subscription, we record the platform (Apple), product ID, Apple's transaction ID, an app account token, status, and expiry, keyed to your user ID, so premium follows you across devices. Payment is handled entirely by Apple — we never receive your card or payment-method details (see §5).</p>
+<h3>2.8 Push notification tokens</h3>
+<p>If you enable notifications, your Apple Push Notification (APNs) device token, environment, and bundle ID are stored against your user ID to deliver friend-request and related notifications.</p>
+<h3>2.9 Feedback / support</h3>
+<p>When you submit in-app feedback we store the category, your message, app version, build number, device model, and OS version. If you are signed in, it is attributed to your account; if signed out, it is stored unattributed.</p>
+<h3>2.10 Onboarding attributes</h3>
+<p>Optional self-reported attributes used to personalize the experience and analyze our funnel: age range, gender, denomination, daily goal, notification preference, whether Screen Time was granted, counts of locked apps/categories/domains, and goal flags. Demographic attributes are kept out of the event stream.</p>
+<h3>2.11 Usage &amp; diagnostics</h3>
+<p>Product/usage analytics (screens viewed, features used, paywall funnel, etc.) via PostHog — metadata only, never your written content; crash diagnostics via Firebase Crashlytics; and an analytics distinct ID used as the in-app analytics identity.</p>
+<h3>2.12 Microphone &amp; speech</h3>
+<p>If you use voice input in chat, the app uses the microphone and Apple speech recognition to convert your voice to text. The resulting text is then handled as a chat message. We do not store raw audio on our servers.</p>
+
+<h2>3. Why we use your data</h2>
+<table>
+<tr><th>Purpose</th><th>Data used</th></tr>
+<tr><td>Core features (reading, journaling, fasting, focus/lock)</td><td>Profile, journals, streaks, on-device selections</td></tr>
+<tr><td>AI Scripture companion</td><td>Chat messages, history, opted-in journals, memories</td></tr>
+<tr><td>Community (friends, groups, churches, leaderboards)</td><td>Social graph, profile, streaks</td></tr>
+<tr><td>Subscriptions &amp; cross-device entitlement</td><td>Subscription records, Apple transaction IDs</td></tr>
+<tr><td>Notifications</td><td>APNs device tokens</td></tr>
+<tr><td>Support &amp; quality</td><td>Feedback submissions, chat feedback</td></tr>
+<tr><td>Product analytics</td><td>Usage metadata, onboarding attributes</td></tr>
+<tr><td>Stability</td><td>Crash diagnostics</td></tr>
+<tr><td>Security &amp; abuse prevention</td><td>Device attestation, auth tokens, rate-limit counters</td></tr>
+</table>
+<p>Our legal bases include performance of our contract with you (core features, subscriptions), your consent (microphone, notifications, Screen Time, opt-in journal-for-AI and public leaderboard), and our legitimate interests (analytics, security, support).</p>
+
+<h2>4. The AI companion — data flow &amp; sub-processors</h2>
+<p>When you message Theo, the app calls our AI backend (AWS Lambda). The backend generates the reply using <strong>Anthropic</strong> (Claude). For journal retrieval — <em>only</em> for entries you marked "Theo can read" — it derives your identity from your verified sign-in token and uses <strong>OpenAI</strong> to compute an embedding of your message, then includes short excerpts from your own opted-in journals as context. Your identity is taken from the verified token, never a client-supplied ID, so one user can never read another's journals. The backend authenticates devices with Apple <strong>App Attest</strong> (a device key, not personal data). <strong>Inputs sent to Anthropic and OpenAI are used to return responses to you and are not used by us to train models.</strong></p>
+
+<h2>5. Payments</h2>
+<p>All purchases and renewals are processed by <strong>Apple</strong> through the App Store using your Apple ID. We do not receive or store your payment card or billing details — only Apple's transaction identifiers and the resulting subscription status.</p>
+
+<h2>6. Screen Time / Family Controls</h2>
+<p>Theo's focus feature uses Apple's <strong>Family Controls / Screen Time</strong> framework to shield distracting apps during your study or fasting sessions. <strong>We cannot see which apps you select.</strong> Apple provides only opaque tokens that cannot be resolved to app names or identities. The app reads only <em>counts</em> of selected apps/categories/domains, the selection stays on your device, and it is never transmitted to our servers. This is not parental control and not MDM.</p>
+
+<h2>7. Who we share data with</h2>
+<p>We do <strong>not</strong> sell your personal data. We share data with service providers strictly to operate the app:</p>
+<table>
+<tr><th>Processor</th><th>Role</th><th>Data involved</th></tr>
+<tr><td>Apple</td><td>Sign in with Apple; App Store payments; APNs; Screen Time</td><td>OAuth identity, transaction IDs, push tokens</td></tr>
+<tr><td>Google</td><td>Google Sign-In</td><td>OAuth identity / email</td></tr>
+<tr><td>Supabase</td><td>Database, auth, edge functions, storage</td><td>Account, profile, journals, social graph, streaks, subscriptions, push tokens, feedback</td></tr>
+<tr><td>PostHog</td><td>Product analytics</td><td>Usage metadata, onboarding attributes, distinct ID (no written content)</td></tr>
+<tr><td>Firebase Crashlytics (Google)</td><td>Crash diagnostics</td><td>Crash reports, device/OS info</td></tr>
+<tr><td>Anthropic</td><td>AI reply generation</td><td>Chat messages, history, context</td></tr>
+<tr><td>OpenAI</td><td>Embeddings for journal retrieval</td><td>Your chat message text (to embed)</td></tr>
+<tr><td>Amazon Web Services</td><td>AI backend compute + storage</td><td>Chat I/O, memories, chat feedback</td></tr>
+</table>
+
+<h2>8. Data retention</h2>
+<ul>
+  <li><strong>On-device chat history:</strong> kept on your device until you delete a conversation or the app, or delete your account.</li>
+  <li><strong>AI memories:</strong> 180-day expiry. <strong>Chat feedback:</strong> 90-day expiry.</li>
+  <li><strong>Account-bound records</strong> (profile, journals, social, streaks, subscriptions, push tokens, feedback): kept while your account exists; removed on account deletion. Subscription records may be retained as required for financial/audit purposes.</li>
+  <li><strong>Analytics/crash data:</strong> retained per our PostHog and Firebase retention settings.</li>
+</ul>
+
+<h2>9. Your rights &amp; choices</h2>
+<h3>Access / export</h3>
+<p>Export your personal data as a JSON document from within the app (<em>Settings → Export My Data</em>).</p>
+<h3>Deletion</h3>
+<p>In-app account deletion (<em>Settings → Delete Account</em>) deletes your local conversations, server feedback, AI memories, and your entire account and cascaded data (profile, journals, friends, owned groups, subscriptions, streaks), and clears local credentials. To request deletion you can't complete in-app, email <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a>.</p>
+<h3>Other controls</h3>
+<ul>
+  <li><strong>Privacy toggles</strong> for friend visibility, searchability, and the public leaderboard.</li>
+  <li><strong>Journal-for-AI:</strong> each journal's privacy level controls whether Theo may read it; private entries are never used.</li>
+  <li><strong>Permissions:</strong> microphone, notifications, and Screen Time are opt-in and can be revoked in iOS Settings.</li>
+  <li><strong>Blocking:</strong> block other users at any time.</li>
+</ul>
+<p>Depending on your location (e.g., EU/UK GDPR, California CCPA/CPRA), you may have additional rights. We do not sell data. To exercise rights, contact <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a>.</p>
+
+<h2>10. Children's privacy</h2>
+<p>Theo is <strong>not directed to children under 13</strong> (or the minimum age in your jurisdiction). We do not knowingly collect personal data from children under that age. If you believe a child has provided us personal data, contact <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a> and we will delete it.</p>
+
+<h2>11. Security</h2>
+<p>Backend data is protected by row-level security so users can only access their own data; the AI backend authenticates devices with Apple App Attest; auth/session tokens and the App Attest key are stored in the iOS Keychain; and journal ownership for AI retrieval is derived from a verified token, not a client-supplied ID. No method of transmission or storage is 100% secure.</p>
+
+<h2>12. International transfers</h2>
+<p>Our processors may process data in the United States and other countries. Where required, transfers rely on appropriate safeguards such as Standard Contractual Clauses.</p>
+
+<h2>13. Changes</h2>
+<p>We may update this policy. Material changes will be posted here with an updated "Last updated" date, and where required we will seek your consent.</p>
+
+<h2>14. Contact</h2>
+<p>Landslide Studios LLC<br>Privacy: <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a></p>
+
+<footer>© 2026 Landslide Studios LLC · <a href="index.html">Support</a> · <a href="terms.html">Terms</a></footer>
+</div>
+</body>
+</html>
