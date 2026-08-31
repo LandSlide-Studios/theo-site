@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Theo</title>
-<meta name="description" content="Privacy Policy for Theo, the Bible, prayer & focus app by Landslide Studios LLC.">
+<meta name="description" content="Privacy Policy for Theo, the Bible
+study and focus app by Landslide Studios LLC.">
 <style>
   :root { --ink:#1c2530; --muted:#5b6876; --accent:#2f6f8f; --bg:#f7f9fb; --card:#ffffff; --line:#e6ecf1; }
   * { box-sizing:border-box; }
@@ -14,140 +15,947 @@
   h1 { font-size:1.8rem; margin:.2em 0; }
   h2 { font-size:1.25rem; margin:1.8em 0 .3em; padding-top:.4em; border-top:1px solid var(--line); }
   h3 { font-size:1.05rem; margin:1.1em 0 .2em; }
+  h4 { font-size:.98rem; margin:1em 0 .2em; color:var(--muted); }
   .meta { color:var(--muted); font-size:.95rem; margin:.2em 0 1.2em; }
   a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
-  table { width:100%; border-collapse:collapse; margin:.6em 0; font-size:.95rem; }
+  table { width:100%; border-collapse:collapse; margin:.6em 0; font-size:.95rem; display:block; overflow-x:auto; }
   th,td { text-align:left; border:1px solid var(--line); padding:8px 10px; vertical-align:top; }
   th { background:#eef3f7; }
   ul { padding-left:1.2em; } li { margin:.25em 0; }
   code { background:#eef3f7; padding:1px 5px; border-radius:5px; font-size:.9em; }
+  hr { border:0; border-top:1px solid var(--line); margin:2em 0; }
   .back { display:inline-block; margin-bottom:14px; }
   footer { color:var(--muted); font-size:.9rem; margin-top:40px; border-top:1px solid var(--line); padding-top:16px; }
 </style>
 </head>
 <body>
 <div class="wrap">
-<a class="back" href="index.html">← Theo Support</a>
-<h1>Privacy Policy</h1>
-<p class="meta">App: Theo · Provider: Landslide Studios LLC · Effective June 17, 2026 · Last updated June 17, 2026 · Contact: <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a></p>
-
-<h2>1. Overview</h2>
-<p>Theo is a faith and focus app. It combines daily Bible reading, journaling, an AI Scripture companion ("Theo"), optional friends/groups/church community features, fasting tracking, and a Screen Time–based focus tool that blocks distracting apps during study sessions. Our design favors <strong>data minimization</strong>:</p>
-<ul>
-  <li><strong>Analytics never carry your written content.</strong> Our analytics layer is structurally limited to non-content metadata (IDs, counts, enum values, booleans).</li>
-  <li><strong>We do not track you</strong> across other companies' apps or websites. The app declares no tracking.</li>
-  <li><strong>We do not use your content to train AI models.</strong></li>
-  <li><strong>The app cannot see which apps you choose to block</strong> — Apple's Screen Time framework gives us only opaque tokens, never app names (see §6).</li>
-</ul>
-
-<h2>2. Data we collect or process</h2>
-<h3>2.1 Account &amp; identity</h3>
-<p>You can use much of the app without an account. To enable cloud features (friends, groups, cross-device subscription, journal sync) you sign in with <strong>Sign in with Apple</strong> or <strong>Google Sign-In</strong> via our auth provider (Supabase). We receive an OAuth identity token and your account is keyed by a user ID (UUID). Apple or Google may pass an <strong>email address</strong> to the auth provider as part of the standard OAuth exchange (with Sign in with Apple you may use Apple's private relay email). We do <strong>not</strong> collect a password.</p>
-<h3>2.2 Profile</h3>
-<p>Username, display name, optional avatar and bio, optional church association, and your privacy-preference flags (visibility of streak/plan/fasting to friends, searchable-by-username, opt-in to the public church leaderboard).</p>
-<h3>2.3 Journals</h3>
-<p>Your written journal entries and timestamps, with a <strong>per-entry privacy setting</strong>: <em>private</em> (owner-only, never leaves your row), <em>Theo can read</em> (visible only to you, but the AI may reference it in chat), or <em>shared to group</em> (only a short excerpt you write yourself is posted; the underlying entry is never read by the group). For entries you mark "Theo can read," a server-side vector embedding powers retrieval; it is never readable by the client and is excluded from your data export.</p>
-<h3>2.4 AI chat ("Theo") content</h3>
-<ul>
-  <li>Your message text and recent conversation history are sent to our AI backend to generate a reply.</li>
-  <li>Conversation history is stored <strong>locally on your device</strong>, not in our cloud database.</li>
-  <li><strong>Cross-conversation "memories":</strong> the backend may extract short personal facts to personalize future chats, stored with a <strong>180-day</strong> expiry.</li>
-  <li><strong>Chat feedback:</strong> if you rate a reply (thumbs up/down), that message and reply are stored with a <strong>90-day</strong> expiry for quality review.</li>
-  <li><strong>We do not use your chat content to train or fine-tune AI models.</strong></li>
-</ul>
-<h3>2.5 Social graph</h3>
-<p>Friend requests/friendships (the two user IDs + status), groups/churches (name, description, membership, role, invite codes), group-feed posts you choose to share, and your block list (a blocked person can never learn they were blocked).</p>
-<h3>2.6 Streaks &amp; progress</h3>
-<p>Your reading/fasting streak counters and last-activity dates are mirrored to the cloud so friends and group leaderboards can show them according to your privacy settings.</p>
-<h3>2.7 Subscriptions</h3>
-<p>When you purchase a subscription, we record the platform (Apple), product ID, Apple's transaction ID, an app account token, status, and expiry, keyed to your user ID, so premium follows you across devices. Payment is handled entirely by Apple — we never receive your card or payment-method details (see §5).</p>
-<h3>2.8 Push notification tokens</h3>
-<p>If you enable notifications, your Apple Push Notification (APNs) device token, environment, and bundle ID are stored against your user ID to deliver friend-request and related notifications.</p>
-<h3>2.9 Feedback / support</h3>
-<p>When you submit in-app feedback we store the category, your message, app version, build number, device model, and OS version. If you are signed in, it is attributed to your account; if signed out, it is stored unattributed.</p>
-<h3>2.10 Onboarding attributes</h3>
-<p>Optional self-reported attributes used to personalize the experience and analyze our funnel: age range, gender, denomination, daily goal, notification preference, whether Screen Time was granted, counts of locked apps/categories/domains, and goal flags. Demographic attributes are kept out of the event stream.</p>
-<h3>2.11 Usage &amp; diagnostics</h3>
-<p>Product/usage analytics (screens viewed, features used, paywall funnel, etc.) via PostHog — metadata only, never your written content; crash diagnostics via Firebase Crashlytics; and an analytics distinct ID used as the in-app analytics identity.</p>
-<h3>2.12 Microphone &amp; speech</h3>
-<p>If you use voice input in chat, the app uses the microphone and Apple speech recognition to convert your voice to text. The resulting text is then handled as a chat message. We do not store raw audio on our servers.</p>
-
-<h2>3. Why we use your data</h2>
+<a class="back" href="index.html">&larr; Theo Support</a>
+<h1 id="privacy-policy--theo-biblelock">Privacy Policy — Theo
+(BibleLock)</h1>
+<p><strong>Effective Date:</strong> August 31, 2026 <strong>Last
+Updated:</strong> August 31, 2026 <strong>Version:</strong> 2.0</p>
+<hr />
+<h2 id="1-who-we-are-and-how-to-reach-us">1. Who We Are and How to Reach
+Us</h2>
+<p>Theo (also marketed as BibleLock) is an iOS application developed and
+operated by <strong>Landslide Studios LLC</strong>, a limited liability
+company based in North Carolina, United States. For the purposes of the
+EU and UK General Data Protection Regulation, Landslide Studios LLC is
+the <strong>data controller</strong> for the personal data described in
+this Policy.</p>
 <table>
-<tr><th>Purpose</th><th>Data used</th></tr>
-<tr><td>Core features (reading, journaling, fasting, focus/lock)</td><td>Profile, journals, streaks, on-device selections</td></tr>
-<tr><td>AI Scripture companion</td><td>Chat messages, history, opted-in journals, memories</td></tr>
-<tr><td>Community (friends, groups, churches, leaderboards)</td><td>Social graph, profile, streaks</td></tr>
-<tr><td>Subscriptions &amp; cross-device entitlement</td><td>Subscription records, Apple transaction IDs</td></tr>
-<tr><td>Notifications</td><td>APNs device tokens</td></tr>
-<tr><td>Support &amp; quality</td><td>Feedback submissions, chat feedback</td></tr>
-<tr><td>Product analytics</td><td>Usage metadata, onboarding attributes</td></tr>
-<tr><td>Stability</td><td>Crash diagnostics</td></tr>
-<tr><td>Security &amp; abuse prevention</td><td>Device attestation, auth tokens, rate-limit counters</td></tr>
+<tbody>
+<tr>
+<td><strong>Privacy contact</strong></td>
+<td><a
+href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a></td>
+</tr>
+<tr>
+<td><strong>Postal address</strong></td>
+<td>Available on request to the address above</td>
+</tr>
+<tr>
+<td><strong>App</strong></td>
+<td>Theo | Bible Study Lock — App Store ID 6760088556</td>
+</tr>
+<tr>
+<td><strong>Website</strong></td>
+<td><a href="https://theo.app">https://theo.app</a></td>
+</tr>
+</tbody>
 </table>
-<p>Our legal bases include performance of our contract with you (core features, subscriptions), your consent (microphone, notifications, Screen Time, opt-in journal-for-AI and public leaderboard), and our legitimate interests (analytics, security, support).</p>
-
-<h2>4. The AI companion — data flow &amp; sub-processors</h2>
-<p>When you message Theo, the app calls our AI backend (AWS Lambda). The backend generates the reply using <strong>Anthropic</strong> (Claude). For journal retrieval — <em>only</em> for entries you marked "Theo can read" — it derives your identity from your verified sign-in token and uses <strong>OpenAI</strong> to compute an embedding of your message, then includes short excerpts from your own opted-in journals as context. Your identity is taken from the verified token, never a client-supplied ID, so one user can never read another's journals. The backend authenticates devices with Apple <strong>App Attest</strong> (a device key, not personal data). <strong>Inputs sent to Anthropic and OpenAI are used to return responses to you and are not used by us to train models.</strong></p>
-
-<h2>5. Payments</h2>
-<p>All purchases and renewals are processed by <strong>Apple</strong> through the App Store using your Apple ID. We do not receive or store your payment card or billing details — only Apple's transaction identifiers and the resulting subscription status.</p>
-
-<h2>6. Screen Time / Family Controls</h2>
-<p>Theo's focus feature uses Apple's <strong>Family Controls / Screen Time</strong> framework to shield distracting apps during your study or fasting sessions. <strong>We cannot see which apps you select.</strong> Apple provides only opaque tokens that cannot be resolved to app names or identities. The app reads only <em>counts</em> of selected apps/categories/domains, the selection stays on your device, and it is never transmitted to our servers. This is not parental control and not MDM.</p>
-
-<h2>7. Who we share data with</h2>
-<p>We do <strong>not</strong> sell your personal data. We share data with service providers strictly to operate the app:</p>
+<p>We do not currently employ a Data Protection Officer. Appointment is
+not mandatory for us under Article 37 GDPR because we are not a public
+authority, our core activities do not consist of large-scale regular and
+systematic monitoring, and our processing of special category data is
+not large scale within the meaning of that Article. If that changes, we
+will appoint one and update this Policy.</p>
+<p><strong>How to complain.</strong> You can raise a privacy complaint
+directly with us at the address above, and we will acknowledge it within
+30 days. If you are in the UK, this is your statutory right to complain
+to the controller under the Data (Use and Access) Act 2025, and you may
+escalate to the Information Commissioner's Office. If you are in the
+EEA, you may lodge a complaint with your national supervisory authority.
+Section 14 lists the regulators by region.</p>
+<hr />
+<h2 id="2-scope-and-summary">2. Scope and Summary</h2>
+<p>This Policy applies to everyone who uses Theo, anywhere in the world.
+It describes what we collect, why, who else sees it, how long we keep
+it, and what you can require us to do.</p>
+<p><strong>The short version:</strong></p>
+<ul>
+<li>Most of what Theo knows about you <strong>stays on your
+phone</strong>. You can use Theo without an account.</li>
+<li>If you sign in, a defined subset syncs to our database so it
+survives a new device.</li>
+<li>When you talk to Theo's AI assistant, your message is sent to
+<strong>Anthropic</strong> to generate the reply. This is disclosed to
+you in the app and requires your agreement before your first
+message.</li>
+<li>We <strong>do not sell or share your personal information</strong>
+for advertising, and we do not use it for cross-context behavioural
+advertising. We have never done so.</li>
+<li>Your content is <strong>never used to train AI models</strong>.</li>
+<li>Your <strong>denomination and faith-related content reveal religious
+belief</strong>, which is protected more strictly than ordinary data.
+Section 5 explains how we handle it and how to withhold it.</li>
+<li>Which apps you block <strong>never leave your device</strong> —
+Apple's Screen Time framework does not permit it, by design.</li>
+</ul>
+<hr />
+<h2 id="3-what-we-collect">3. What We Collect</h2>
+<h3 id="31-stored-on-your-device-only">3.1 Stored On Your Device
+Only</h3>
+<p>Collected during onboarding and through everyday use, held in iOS
+local storage. <strong>Not transmitted to us</strong>, except where
+Section 3.3 (AI) or Section 3.2 (account sync) applies:</p>
+<ul>
+<li><strong>About you:</strong> First name, age range, gender,
+denomination</li>
+<li><strong>Spiritual profile:</strong> Identity goal, commitment
+phrase, spiritual needs, obstacles</li>
+<li><strong>Goals and schedule:</strong> Daily reading goal, lock
+windows, reading schedule</li>
+<li><strong>Focus and fasting:</strong> Session history, fasting
+records, and the apps you selected to block</li>
+<li><strong>Progress:</strong> Streaks, points, badges, faith level,
+reading plan progress, activity feed</li>
+<li><strong>Bible engagement:</strong> Highlights, likes, notes</li>
+<li><strong>Chat history:</strong> Your conversation with Theo, held
+locally</li>
+<li><strong>Preferences:</strong> Language, notification settings,
+configuration</li>
+</ul>
+<p><strong>Blocked app selections are a special case.</strong> They are
+held as opaque tokens issued by Apple's FamilyControls framework. The
+tokens are meaningless outside your device, cannot be resolved back to
+app names by us, and are technically incapable of being transmitted to
+our servers. We never learn which apps you block.</p>
+<p>You can erase all on-device data at any time from <strong>Settings →
+Delete My Data</strong>, or by deleting the app.</p>
+<h3 id="32-account-data-supabase">3.2 Account Data (Supabase)</h3>
+<p>If you sign in with Apple or Google, we store on Supabase
+(PostgreSQL, United States):</p>
+<ul>
+<li><strong>Profile:</strong> Username, display name, optional avatar
+URL</li>
+<li><strong>Email address:</strong> From your identity provider. If you
+used Sign in with Apple and chose "Hide My Email," we only ever receive
+the private relay address. We do not send marketing email.</li>
+<li><strong>Subscription status:</strong> Whether a subscription is
+active, and which product</li>
+<li><strong>Progress:</strong> Streaks, reading plan progress, activity
+history</li>
+<li><strong>Journals:</strong> All entries, at every privacy level
+(Section 3.2.1 explains what each level changes)</li>
+<li><strong>Journal embeddings:</strong> Numeric vectors for entries you
+opted into "Theo can read"</li>
+<li><strong>Push tokens:</strong> APNs tokens for reminders and social
+notifications</li>
+<li><strong>Social graph:</strong> Friends, groups, churches you
+follow</li>
+<li><strong>Feed posts:</strong> Excerpts you chose to share</li>
+<li><strong>Leaderboard entries:</strong> Username, display name, streak
+rank, within groups you joined</li>
+</ul>
+<p>Every row is protected by PostgreSQL Row-Level Security, enforced in
+the database rather than in app code. You can read your own rows and
+rows that someone has deliberately shared with you. Nothing else.</p>
+<h4 id="321-journal-privacy-levels">3.2.1 Journal Privacy Levels</h4>
 <table>
-<tr><th>Processor</th><th>Role</th><th>Data involved</th></tr>
-<tr><td>Apple</td><td>Sign in with Apple; App Store payments; APNs; Screen Time</td><td>OAuth identity, transaction IDs, push tokens</td></tr>
-<tr><td>Google</td><td>Google Sign-In</td><td>OAuth identity / email</td></tr>
-<tr><td>Supabase</td><td>Database, auth, edge functions, storage</td><td>Account, profile, journals, social graph, streaks, subscriptions, push tokens, feedback</td></tr>
-<tr><td>PostHog</td><td>Product analytics</td><td>Usage metadata, onboarding attributes, distinct ID (no written content)</td></tr>
-<tr><td>Firebase Crashlytics (Google)</td><td>Crash diagnostics</td><td>Crash reports, device/OS info</td></tr>
-<tr><td>Anthropic</td><td>AI reply generation</td><td>Chat messages, history, context</td></tr>
-<tr><td>OpenAI</td><td>Embeddings for journal retrieval</td><td>Your chat message text (to embed)</td></tr>
-<tr><td>Amazon Web Services</td><td>AI backend compute + storage</td><td>Chat I/O, memories, chat feedback</td></tr>
+<thead>
+<tr>
+<th>Level</th>
+<th>Who can read it</th>
+<th>Sent to an AI provider?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Private</strong> (default)</td>
+<td>You only</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Theo can read</strong></td>
+<td>You, and Theo during your conversations</td>
+<td>Yes — text is embedded by OpenAI; matching excerpts go to Anthropic
+as context</td>
+</tr>
+<tr>
+<td><strong>Shared to a group</strong></td>
+<td>You and members of that group</td>
+<td>No</td>
+</tr>
+</tbody>
 </table>
-
-<h2>8. Data retention</h2>
+<p>The level is yours to set and change at any time. Lowering it stops
+future processing; Section 9 covers deletion of what already exists.</p>
+<h3 id="33-data-sent-to-ai-providers">3.3 Data Sent to AI Providers</h3>
+<p>When you send a message to Theo, our AWS Lambda proxy transmits to
+<strong>Anthropic</strong>:</p>
 <ul>
-  <li><strong>On-device chat history:</strong> kept on your device until you delete a conversation or the app, or delete your account.</li>
-  <li><strong>AI memories:</strong> 180-day expiry. <strong>Chat feedback:</strong> 90-day expiry.</li>
-  <li><strong>Account-bound records</strong> (profile, journals, social, streaks, subscriptions, push tokens, feedback): kept while your account exists; removed on account deletion. Subscription records may be retained as required for financial/audit purposes.</li>
-  <li><strong>Analytics/crash data:</strong> retained per our PostHog and Firebase retention settings.</li>
+<li>Your message text</li>
+<li>Your first name, if you gave one</li>
+<li>Your denomination, if you gave one</li>
+<li>The conversation turn count</li>
+<li>Short excerpts from journals you opted into "Theo can read,"
+selected by relevance</li>
+<li>Summarised memory of earlier conversations, so Theo has
+continuity</li>
 </ul>
-
-<h2>9. Your rights &amp; choices</h2>
-<h3>Access / export</h3>
-<p>Export your personal data as a JSON document from within the app (<em>Settings → Export My Data</em>).</p>
-<h3>Deletion</h3>
-<p>In-app account deletion (<em>Settings → Delete Account</em>) deletes your local conversations, server feedback, AI memories, and your entire account and cascaded data (profile, journals, friends, owned groups, subscriptions, streaks), and clears local credentials. To request deletion you can't complete in-app, email <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a>.</p>
-<h3>Other controls</h3>
+<p>Separately, when you opt a journal entry into "Theo can read," its
+text is sent to <strong>OpenAI</strong> once to generate an embedding.
+OpenAI is not involved in generating Theo's replies.</p>
+<p><strong>We never send</strong> your email address, surname, payment
+details, location, Private journal entries, or your blocked-app
+selections.</p>
+<p>We do not retain the raw text of your chat messages on our servers.
+The Lambda receives your message, forwards it, streams the reply back,
+and discards it. We do store <strong>summarised</strong> conversation
+memories in AWS DynamoDB so Theo remembers context between sessions;
+these expire automatically (Section 9).</p>
+<p><strong>Neither Anthropic nor OpenAI trains models on this
+data.</strong> Both operate under commercial API terms that exclude API
+traffic from model training.</p>
+<h3 id="34-analytics-and-diagnostics">3.4 Analytics and Diagnostics</h3>
 <ul>
-  <li><strong>Privacy toggles</strong> for friend visibility, searchability, and the public leaderboard.</li>
-  <li><strong>Journal-for-AI:</strong> each journal's privacy level controls whether Theo may read it; private entries are never used.</li>
-  <li><strong>Permissions:</strong> microphone, notifications, and Screen Time are opt-in and can be revoked in iOS Settings.</li>
-  <li><strong>Blocking:</strong> block other users at any time.</li>
+<li><strong>PostHog</strong> (product analytics): Usage events and
+person properties — age range, gender, denomination, daily goal,
+notification preference, Screen Time status, spiritual needs, obstacles.
+Linked to your account ID if you have one, otherwise to a random device
+identifier.</li>
+<li><strong>Firebase Crashlytics</strong> (Google): Crash reports, stack
+traces, device model, OS version, app version, an anonymous installation
+ID.</li>
 </ul>
-<p>Depending on your location (e.g., EU/UK GDPR, California CCPA/CPRA), you may have additional rights. We do not sell data. To exercise rights, contact <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a>.</p>
-
-<h2>10. Children's privacy</h2>
-<p>Theo is <strong>not directed to children under 13</strong> (or the minimum age in your jurisdiction). We do not knowingly collect personal data from children under that age. If you believe a child has provided us personal data, contact <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a> and we will delete it.</p>
-
-<h2>11. Security</h2>
-<p>Backend data is protected by row-level security so users can only access their own data; the AI backend authenticates devices with Apple App Attest; auth/session tokens and the App Attest key are stored in the iOS Keychain; and journal ownership for AI retrieval is derived from a verified token, not a client-supplied ID. No method of transmission or storage is 100% secure.</p>
-
-<h2>12. International transfers</h2>
-<p>Our processors may process data in the United States and other countries. Where required, transfers rely on appropriate safeguards such as Standard Contractual Clauses.</p>
-
-<h2>13. Changes</h2>
-<p>We may update this policy. Material changes will be posted here with an updated "Last updated" date, and where required we will seek your consent.</p>
-
-<h2>14. Contact</h2>
-<p>Landslide Studios LLC<br>Privacy: <a href="mailto:magliettothomas@gmail.com">magliettothomas@gmail.com</a></p>
-
-<footer>© 2026 Landslide Studios LLC · <a href="index.html">Support</a> · <a href="terms.html">Terms</a></footer>
+<p>Neither is used for advertising. Theo contains <strong>no advertising
+SDKs</strong>, performs <strong>no tracking as Apple defines
+it</strong>, and does not use the App Tracking Transparency framework
+because it has nothing to ask for. Our privacy manifest declares
+<code>NSPrivacyTracking = false</code>.</p>
+<h3 id="35-feedback">3.5 Feedback</h3>
+<p>If you submit feedback: the category and message you write, app
+version and build, device model and iOS version, and your username or
+anonymous analytics ID. Stored in Supabase.</p>
+<h3 id="36-social-features">3.6 Social Features</h3>
+<p>If you join groups or add friends, your username, display name, and
+streak rank are visible to those people. If your church enables a public
+web leaderboard at <code>theo.app/c/&lt;slug&gt;</code>
+<strong>and</strong> you have "discoverable by username" switched on,
+that information may be publicly visible. Both conditions must be true;
+the setting is off by default and lives in <strong>Settings →
+Privacy</strong>.</p>
+<hr />
+<h2 id="4-why-we-process-it-and-on-what-legal-basis">4. Why We Process
+It, and On What Legal Basis</h2>
+<p>For users in the EEA, UK, and Switzerland, Article 6 GDPR requires a
+legal basis for every purpose. Ours:</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Data</th>
+<th>Legal basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provide the core app</td>
+<td>Profile, progress, preferences</td>
+<td>Contract — Art. 6(1)(b)</td>
+</tr>
+<tr>
+<td>Sync your account across devices</td>
+<td>Account data (§3.2)</td>
+<td>Contract — Art. 6(1)(b)</td>
+</tr>
+<tr>
+<td>Generate AI replies</td>
+<td>Message, first name, denomination, journal excerpts</td>
+<td>Consent — Art. 6(1)(a), plus explicit consent under Art. 9(2)(a) for
+the religious element</td>
+</tr>
+<tr>
+<td>Personalise Scripture suggestions</td>
+<td>Spiritual profile, progress</td>
+<td>Consent — Art. 6(1)(a)</td>
+</tr>
+<tr>
+<td>Social and leaderboard features</td>
+<td>Username, display name, streak</td>
+<td>Consent — Art. 6(1)(a)</td>
+</tr>
+<tr>
+<td>Process subscriptions</td>
+<td>Subscription status</td>
+<td>Contract — Art. 6(1)(b)</td>
+</tr>
+<tr>
+<td>Send push notifications</td>
+<td>APNs token</td>
+<td>Consent — Art. 6(1)(a)</td>
+</tr>
+<tr>
+<td>Product analytics</td>
+<td>Usage events, person properties</td>
+<td>Consent — Art. 6(1)(a)</td>
+</tr>
+<tr>
+<td>Crash diagnostics</td>
+<td>Crash reports</td>
+<td>Legitimate interests — Art. 6(1)(f): keeping the app functional.
+Balancing test on file.</td>
+</tr>
+<tr>
+<td>Security, abuse prevention, enforcing our Terms</td>
+<td>Account and usage data</td>
+<td>Legitimate interests — Art. 6(1)(f)</td>
+</tr>
+<tr>
+<td>Comply with legal obligations</td>
+<td>As required</td>
+<td>Legal obligation — Art. 6(1)(c)</td>
+</tr>
+</tbody>
+</table>
+<p>Where we rely on consent, you may withdraw it at any time without
+affecting the lawfulness of what came before. Where we rely on
+legitimate interests, you may object under Article 21 and we will stop
+unless we can show compelling grounds that override your rights.</p>
+<hr />
+<h2 id="5-religious-belief-and-other-special-category-data">5. Religious
+Belief and Other Special Category Data</h2>
+<p><strong>This section matters more than any other in this Policy.
+Please read it.</strong></p>
+<p>Theo is a Christian Bible study app. Several things you tell us
+<strong>reveal your religious or philosophical beliefs</strong>, which
+Article 9 GDPR, UK GDPR, and comparable laws elsewhere treat as a
+protected special category requiring stricter handling than ordinary
+personal data:</p>
+<ul>
+<li>Your <strong>denomination</strong></li>
+<li>Your <strong>spiritual needs, obstacles, identity goal, and
+commitment phrase</strong></li>
+<li>The <strong>content of your journals and your conversations with
+Theo</strong></li>
+<li>In some readings, the mere fact that you use a Bible study app at
+all</li>
+</ul>
+<p><strong>Our legal basis for processing it is your explicit
+consent</strong> under Article 9(2)(a) GDPR and Article 9(2)(a) UK GDPR.
+That means:</p>
+<ul>
+<li>Every field that reveals belief is <strong>optional</strong>.
+Onboarding can be completed without giving a denomination, spiritual
+needs, or obstacles. Theo works without them; it is simply less
+personalised.</li>
+<li>Before your first message to the AI assistant, Theo shows you a
+screen naming Anthropic and OpenAI, describing exactly what is sent, and
+requiring you to tap <strong>Agree &amp; Continue</strong>. Declining
+means the assistant is not available; every other part of the app still
+works.</li>
+<li>Consent is requested separately for this purpose. It is not bundled
+into acceptance of our Terms of Service, and continuing to use the app
+is not treated as consent.</li>
+<li>You can withdraw it at any time in <strong>Settings →
+Privacy</strong>, and clear the underlying data in <strong>Settings →
+Delete My Data</strong>.</li>
+</ul>
+<p><strong>Health-adjacent data.</strong> Fasting records, focus session
+history, and conversations touching on emotional wellbeing may be
+treated as health or "consumer health data" under some laws — notably
+Washington's My Health My Data Act and Nevada SB 370. Our separate
+<strong>Consumer Health Data Privacy Policy</strong> covers this and is
+linked from the same place as this Policy.</p>
+<p><strong>We do not sell special category data. We do not use it for
+advertising, profiling with legal effect, or any inference beyond
+serving you inside the app.</strong></p>
+<hr />
+<h2 id="6-how-theos-ai-works-and-what-that-means-for-you">6. How Theo's
+AI Works, and What That Means for You</h2>
+<h3 id="61-you-are-talking-to-a-machine">6.1 You Are Talking to a
+Machine</h3>
+<p><strong>Theo is an artificial intelligence system, not a human being
+and not a member of clergy.</strong> Every reply is machine-generated.
+Theo has a name, an avatar, and a warm conversational manner, and it
+remembers earlier conversations — none of that makes it a person. We
+state this in the app before your first message, and we restate it here
+so there can be no confusion.</p>
+<p>This disclosure is made in accordance with <strong>Article 50(1) of
+the EU Artificial Intelligence Act (Regulation (EU) 2024/1689)</strong>,
+which has applied since <strong>2 August 2026</strong>, and with
+<strong>California Senate Bill 243</strong>, in force since <strong>1
+January 2026</strong>.</p>
+<h3 id="62-the-models-behind-it">6.2 The Models Behind It</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Provider</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generating Theo's replies</td>
+<td><strong>Anthropic PBC</strong> (United States)</td>
+<td>Claude Haiku 4.5</td>
+</tr>
+<tr>
+<td>Journal embeddings for semantic search</td>
+<td><strong>OpenAI, L.L.C.</strong> (United States)</td>
+<td>text-embedding-3-small</td>
+</tr>
+</tbody>
+</table>
+<p>We may change models or providers to improve quality, reliability, or
+cost. If we add or substitute an AI provider, we will update this
+Policy, and where the change is material we will notify you in the app
+and seek fresh consent before sending your data anywhere new.</p>
+<h3 id="63-what-theo-is-not">6.3 What Theo Is Not</h3>
+<p>Theo is not a substitute for Scripture, for your pastor, or for
+professional medical, mental health, legal, or financial advice. It can
+be wrong. It can misquote or misattribute Bible verses. Verify anything
+that matters against your Bible and a person you trust.</p>
+<h3 id="64-crisis-handling">6.4 Crisis Handling</h3>
+<p>If your message suggests suicidal ideation, self-harm, or acute
+crisis, Theo is designed to break out of ordinary conversation and
+surface crisis resources — in the United States, the 988 Suicide &amp;
+Crisis Lifeline; elsewhere, region-appropriate services and emergency
+numbers. This protocol operates before the model generates a reply, so
+it does not depend on the model behaving correctly.</p>
+<p>We publish this protocol here as required by California SB 243
+§22602. <strong>Theo is not an emergency service.</strong> If you are in
+danger, contact your local emergency number.</p>
+<h3 id="65-if-you-are-1317">6.5 If You Are 13–17</h3>
+<p>Theo periodically reminds younger users that they are talking to an
+AI and that taking a break is a good idea. Sexually explicit content is
+refused for all users regardless of age.</p>
+<h3 id="66-automated-decisions">6.6 Automated Decisions</h3>
+<p>We do <strong>not</strong> make decisions producing legal or
+similarly significant effects about you by automated means. Theo does
+not decide anything about your eligibility, pricing, employment, credit,
+or access to services. There is no Article 22 GDPR automated
+decision-making in Theo, and nothing that would engage the
+automated-decision transparency obligation entering Australian law on 10
+December 2026. If that ever changes, this Policy will say so before it
+does.</p>
+<p>Content personalisation — which chapter Theo suggests, which reading
+plan it recommends — is automated, but it only shapes suggestions you
+are free to ignore.</p>
+<hr />
+<h2 id="7-who-else-receives-your-data">7. Who Else Receives Your
+Data</h2>
+<p>These are our processors and sub-processors. Each is bound by a
+written data processing agreement incorporating the European
+Commission's Standard Contractual Clauses where required.</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Role</th>
+<th>What it receives</th>
+<th>Retention</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supabase</strong></td>
+<td>Database, auth, storage</td>
+<td>Account data (§3.2)</td>
+<td>Life of your account</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>AI replies</td>
+<td>Message text, first name, denomination, turn count, journal
+excerpts, conversation memory</td>
+<td>Auto-deleted within 30 days; up to 2 years only where a Usage Policy
+violation is being enforced</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>Journal embeddings</td>
+<td>Text of journals opted into "Theo can read"</td>
+<td>Up to 30 days for abuse monitoring, then deleted</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Amazon Web Services</strong></td>
+<td>Lambda proxy, DynamoDB memory</td>
+<td>Chat traffic in transit; summarised memories at rest</td>
+<td>Lambda retains nothing; memories per §9</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Firebase Crashlytics</strong> (Google)</td>
+<td>Crash reporting</td>
+<td>Crash reports, device and OS, anonymous install ID</td>
+<td>~90 days</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>PostHog</strong></td>
+<td>Product analytics</td>
+<td>Usage events, person properties</td>
+<td>365 days</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Apple</strong></td>
+<td>Sign in, payments, push, Screen Time</td>
+<td>Opaque user ID, email or relay address; payment handled entirely by
+Apple</td>
+<td>Per Apple's policy</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Google</strong></td>
+<td>Sign in with Google</td>
+<td>Opaque user ID, email, name</td>
+<td>Per Google's policy</td>
+<td>United States</td>
+</tr>
+</tbody>
+</table>
+<p>Neither Anthropic nor OpenAI uses this data to train models.</p>
+<p><strong>We have never sold personal information, and we have never
+shared it for cross-context behavioural advertising</strong>, as those
+terms are defined in the CCPA and comparable state laws. We do not
+intend to. If that ever changes, we will amend this Policy and provide
+the opt-out the law requires before any such disclosure occurs.</p>
+<p>We may disclose data where legally compelled by valid process, or
+where necessary to protect life, safety, or our legal rights. We will
+notify you unless legally barred from doing so.</p>
+<p>If Theo is ever sold or merged, your data may transfer to the
+acquirer, who will remain bound by this Policy or must obtain fresh
+consent. You will be told before it happens.</p>
+<hr />
+<h2 id="8-security">8. Security</h2>
+<ul>
+<li><strong>In transit:</strong> TLS 1.2+ everywhere.</li>
+<li><strong>At rest:</strong> AES-256 on Supabase and AWS. Private
+journals carry an additional application-layer encryption step.</li>
+<li><strong>Access control:</strong> PostgreSQL Row-Level Security,
+enforced in the database. Even a flaw in our app code cannot expose
+another user's rows.</li>
+<li><strong>Secrets:</strong> API keys live in AWS Secrets Manager,
+never in the app binary. The app cannot reach Anthropic or OpenAI
+directly; all traffic passes through our authenticated proxy.</li>
+<li><strong>Abuse limits:</strong> Per-user and per-day quotas cap what
+a compromised credential can do.</li>
+<li><strong>On device:</strong> Data sits inside the iOS application
+sandbox, protected by your device passcode and Apple's hardware
+encryption.</li>
+</ul>
+<p>No system is perfectly secure. Where a breach is likely to result in
+a risk to your rights, we will notify the competent supervisory
+authority within <strong>72 hours</strong> of becoming aware, as Article
+33 GDPR requires, and notify you directly without undue delay where the
+risk is high. Where US state breach-notification law applies, we will
+comply with its timelines too.</p>
+<hr />
+<h2 id="9-how-long-we-keep-things">9. How Long We Keep Things</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-device data</td>
+<td>Until you delete it or remove the app</td>
+</tr>
+<tr>
+<td>Account and profile</td>
+<td>Life of the account; deleted within <strong>30 days</strong> of a
+deletion request</td>
+</tr>
+<tr>
+<td>Journals and embeddings</td>
+<td>Life of the account; deleted within <strong>30 days</strong> of
+deletion</td>
+</tr>
+<tr>
+<td>Chat message text</td>
+<td><strong>Not retained</strong> — discarded after the reply
+streams</td>
+</tr>
+<tr>
+<td>Conversation memories (DynamoDB)</td>
+<td><strong>180 days</strong>, then auto-expired by TTL</td>
+</tr>
+<tr>
+<td>Short-term conversation context</td>
+<td><strong>60 days</strong>, then auto-expired by TTL</td>
+</tr>
+<tr>
+<td>AI provider copies</td>
+<td>≤30 days at Anthropic and OpenAI</td>
+</tr>
+<tr>
+<td>Analytics (PostHog)</td>
+<td>365 days</td>
+</tr>
+<tr>
+<td>Crash reports (Crashlytics)</td>
+<td>~90 days</td>
+</tr>
+<tr>
+<td>Feedback submissions</td>
+<td>Up to 30 days after a deletion request</td>
+</tr>
+<tr>
+<td>Records we must keep by law</td>
+<td>As long as the law requires, no longer</td>
+</tr>
+</tbody>
+</table>
+<p>Deleting your account triggers deletion across Supabase and DynamoDB.
+Deletion at AWS begins immediately and normally completes within
+minutes; if a service is briefly unavailable we retry with exponential
+backoff for up to 24 hours. Backups roll off within 30 days.</p>
+<hr />
+<h2 id="10-where-your-data-goes">10. Where Your Data Goes</h2>
+<p>Theo is operated from the United States, and all of our providers
+process data in the United States. If you use Theo from anywhere else,
+your data is transferred to the United States.</p>
+<p>For transfers out of the <strong>EEA, UK, or Switzerland</strong>, we
+rely on the <strong>European Commission's Standard Contractual
+Clauses</strong> (Decision 2021/914), the <strong>UK International Data
+Transfer Addendum</strong>, and the Swiss addendum recognised by the
+FDPIC, as incorporated into our agreements with each provider named in
+Section 7, together with supplementary technical measures — encryption
+in transit and at rest, and the data minimisation described in Section
+3.3.</p>
+<p>We do not rely on your consent as the transfer mechanism. Article 49
+consent is a derogation intended for occasional transfers, and it is not
+an appropriate basis for the routine transfers Theo depends on. You may
+request a copy of the relevant clauses by writing to us.</p>
+<p>Some destination countries do not offer protection equivalent to your
+home jurisdiction, and public authorities there may have access rights
+that your own law would not permit. The safeguards above are designed to
+address that, but we would rather you knew.</p>
+<hr />
+<h2 id="11-your-rights-wherever-you-are">11. Your Rights, Wherever You
+Are</h2>
+<p>We extend the following to <strong>every user, in every
+country</strong>, regardless of whether your local law requires it:</p>
+<ul>
+<li><strong>Access</strong> — get a copy of what we hold</li>
+<li><strong>Portability</strong> — receive it in a structured,
+machine-readable format</li>
+<li><strong>Correction</strong> — fix anything inaccurate</li>
+<li><strong>Deletion</strong> — have it erased</li>
+<li><strong>Restriction</strong> — have us pause processing while a
+dispute is resolved</li>
+<li><strong>Objection</strong> — object to processing based on
+legitimate interests</li>
+<li><strong>Withdraw consent</strong> — at any time, without penalty
+beyond losing the feature it powered</li>
+<li><strong>Non-discrimination</strong> — we will not degrade your
+service, raise your price, or reduce quality because you exercised a
+right</li>
+</ul>
+<p><strong>Doing it yourself, immediately:</strong> Settings → Export My
+Data (access and portability), Settings → Delete My Data (deletion),
+Settings → Privacy (consent and visibility controls), Settings → Delete
+Account (full account deletion).</p>
+<p><strong>Or ask us:</strong> <a
+href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a>.
+We respond within <strong>30 days</strong>, extendable by 60 days for
+genuinely complex requests, and we will tell you if we extend.
+Verification is proportionate: we ask you to write from your registered
+email, or confirm details only the account holder would know. We do not
+charge, unless a request is manifestly unfounded or excessive — in which
+case we will say so and explain why rather than quietly ignoring it.</p>
+<p>You may use an authorised agent where your local law provides for
+one.</p>
+<hr />
+<h2 id="12-regional-rights">12. Regional Rights</h2>
+<h3 id="121-eea-united-kingdom-and-switzerland">12.1 EEA, United
+Kingdom, and Switzerland</h3>
+<p>You hold every right in Section 11 as a matter of law, under Articles
+15–22 GDPR, the UK GDPR as amended by the <strong>Data (Use and Access)
+Act 2025</strong>, and the Swiss Federal Act on Data Protection.</p>
+<p>Additionally:</p>
+<ul>
+<li><strong>Complain to us first.</strong> UK users have a statutory
+right to do so and to receive a response. Section 1 explains how.</li>
+<li><strong>Complain to a regulator.</strong> EEA users may complain to
+their national supervisory authority — the list is at
+<code>edpb.europa.eu/about-edpb/board/members_en</code>. UK users may
+complain to the ICO at <code>ico.org.uk/make-a-complaint</code>. Swiss
+users may contact the FDPIC at <code>edoeb.admin.ch</code>.</li>
+<li><strong>EU/UK representative.</strong> We are a US controller
+offering services into the EEA and UK. Where Article 27 GDPR requires
+it, we will designate representatives and publish their contact details
+in this Section. Until that appears here, direct all requests to <a
+href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a>,
+which we monitor and answer within the statutory deadline.</li>
+</ul>
+<h3 id="122-california">12.2 California</h3>
+<p>Under the CCPA as amended by the CPRA, you may know, delete, correct,
+opt out of sale or sharing, and limit the use of sensitive personal
+information.</p>
+<ul>
+<li><strong>We do not sell or share your personal information.</strong>
+No "Do Not Sell or Share My Personal Information" link is required,
+because there is nothing to opt out of.</li>
+<li><strong>Sensitive personal information.</strong> Your religious
+beliefs are sensitive personal information under Cal. Civ. Code
+§1798.140(ae). We use them <strong>only</strong> to deliver the service
+you asked for — personalising Scripture and Theo's replies — which falls
+inside the §1798.121(a) exemption for uses reasonably necessary to
+perform the service. We do not use or disclose them for any other
+purpose, so the "Limit the Use of My Sensitive Personal Information"
+right has nothing to bite on. You can still remove the data entirely in
+the app.</li>
+<li><strong>Automated decision-making.</strong> We do not use ADMT for
+any "significant decision" as defined in the CPPA regulations effective
+1 January 2026, so no pre-use notice or ADMT opt-out applies.</li>
+<li><strong>Companion chatbots.</strong> Section 6 sets out our SB 243
+disclosures.</li>
+<li><strong>Shine the Light</strong> (Cal. Civ. Code §1798.83): we
+disclose no personal information to third parties for their own direct
+marketing.</li>
+</ul>
+<p>Whether we meet the CCPA's applicability thresholds in any given
+year, we honour these rights.</p>
+<h3 id="123-other-us-states">12.3 Other US States</h3>
+<p>Residents of Colorado, Connecticut, Delaware, Florida, Indiana, Iowa,
+Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New
+Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, and Virginia have
+rights of access, correction, deletion, portability, and opt-out of
+targeted advertising, sale, and profiling with legal effect. We honour
+all of them through the mechanisms in Section 11.</p>
+<p>Notes that actually matter:</p>
+<ul>
+<li><strong>We conduct no targeted advertising, no sale, and no
+profiling with legal or similarly significant effect.</strong> Those
+opt-outs are moot here.</li>
+<li><strong>Universal opt-out signals.</strong> We honour Global Privacy
+Control and equivalent signals where our web properties receive them.
+The iOS app has no advertising or sale to opt out of.</li>
+<li><strong>Sensitive data consent.</strong> Colorado, Connecticut,
+Maryland, Minnesota, Montana, New Jersey, Oregon, Texas, and Virginia
+require opt-in consent before processing religious belief data. Section
+5 describes the consent we obtain.</li>
+<li><strong>Maryland.</strong> MODPA prohibits selling sensitive data
+outright and limits collection to what is reasonably necessary for the
+service. We meet both.</li>
+<li><strong>Appeals.</strong> If we refuse a request, you may appeal by
+replying to our decision. We will respond within 45 days with a written
+explanation, and tell you how to contact your state Attorney General if
+still dissatisfied.</li>
+</ul>
+<h3 id="124-washington-and-nevada--consumer-health-data">12.4 Washington
+and Nevada — Consumer Health Data</h3>
+<p>Washington's My Health My Data Act and Nevada SB 370 apply regardless
+of our size. Our separate <strong>Consumer Health Data Privacy
+Policy</strong> sets out what we treat as consumer health data, the
+consent we obtain, your right to withdraw it, and your right to have
+that data deleted — including from our processors. It is published
+alongside this Policy and linked from the app.</p>
+<h3 id="125-canada">12.5 Canada</h3>
+<p>Under PIPEDA and provincial law, you may access and correct your data
+and withdraw consent. Quebec residents additionally have rights to data
+portability and to be informed about automated decisions under Law 25;
+as Section 6.6 notes, Theo makes none. You may complain to the Office of
+the Privacy Commissioner of Canada, or to the Commission d'accès à
+l'information du Québec.</p>
+<h3 id="126-brazil">12.6 Brazil</h3>
+<p>Under the LGPD you may confirm processing, access, correct,
+anonymise, block, delete, port, learn with whom we share, and withdraw
+consent. Our legal bases are consent (Art. 7, I) and contract
+performance (Art. 7, V). Religious data is <em>dado pessoal
+sensível</em> under Art. 11 and is processed only on your specific,
+highlighted consent. You may complain to the ANPD.</p>
+<h3 id="127-australia-and-new-zealand">12.7 Australia and New
+Zealand</h3>
+<p>Under the Privacy Act 1988 (Cth) and the Australian Privacy
+Principles, you may access and correct your personal information and
+complain to the OAIC. Religious beliefs are "sensitive information"
+under APP 3.3 and require your consent, which Section 5 describes. We do
+not use automated decision-making of the kind covered by the APP 1.7
+transparency obligation commencing 10 December 2026. New Zealand users
+have equivalent rights under the Privacy Act 2020 and may complain to
+the Office of the Privacy Commissioner.</p>
+<h3 id="128-india">12.8 India</h3>
+<p>Under the Digital Personal Data Protection Act 2023 and the DPDP
+Rules 2025, you may access, correct, erase, nominate another person to
+act for you, and grieve. We process on your consent. As implementation
+phases in through 2026 and 2027 — including the Consent Manager
+framework — we will align and update this Policy.</p>
+<h3 id="129-rest-of-world">12.9 Rest of World</h3>
+<p>We extend Section 11 rights to all users. This is in addition to
+whatever your national law provides, including:</p>
+<table>
+<thead>
+<tr>
+<th>Jurisdiction</th>
+<th>Law</th>
+<th>Regulator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Japan</td>
+<td>APPI</td>
+<td>Personal Information Protection Commission</td>
+</tr>
+<tr>
+<td>South Korea</td>
+<td>PIPA</td>
+<td>Personal Information Protection Commission</td>
+</tr>
+<tr>
+<td>China</td>
+<td>PIPL</td>
+<td>Cyberspace Administration of China</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td>PDPA</td>
+<td>PDPC</td>
+</tr>
+<tr>
+<td>Thailand</td>
+<td>PDPA</td>
+<td>PDPC Thailand</td>
+</tr>
+<tr>
+<td>Vietnam</td>
+<td>Personal Data Protection Law</td>
+<td>Ministry of Public Security</td>
+</tr>
+<tr>
+<td>Indonesia</td>
+<td>PDP Law</td>
+<td>Ministry of Communication</td>
+</tr>
+<tr>
+<td>South Africa</td>
+<td>POPIA</td>
+<td>Information Regulator</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+<td>NDPA 2023</td>
+<td>NDPC</td>
+</tr>
+<tr>
+<td>Kenya</td>
+<td>Data Protection Act 2019</td>
+<td>ODPC</td>
+</tr>
+<tr>
+<td>Saudi Arabia</td>
+<td>PDPL</td>
+<td>SDAIA</td>
+</tr>
+<tr>
+<td>UAE</td>
+<td>Federal Decree-Law 45/2021</td>
+<td>UAE Data Office</td>
+</tr>
+<tr>
+<td>Turkey</td>
+<td>KVKK</td>
+<td>KVKK Authority</td>
+</tr>
+<tr>
+<td>Israel</td>
+<td>Privacy Protection Law</td>
+<td>PPA</td>
+</tr>
+</tbody>
+</table>
+<p>Several of these jurisdictions restrict cross-border transfers. Where
+your national law requires consent for transfer to the United States,
+your use of Theo's cloud features following this notice constitutes that
+consent, and you can avoid all transfers by using Theo without an
+account and without the AI assistant.</p>
+<hr />
+<h2 id="13-children-and-teenagers">13. Children and Teenagers</h2>
+<p><strong>Theo is for ages 13 and up.</strong> The under-13 option is
+deliberately absent from the age selection screen, and the app is built
+so that we do not knowingly collect personal information from anyone
+under 13. We do not operate a child-directed service under COPPA, and
+Theo is not in the Kids Category.</p>
+<p>If we learn that a user is under 13, we delete their information
+promptly and terminate the account. If you are a parent or guardian who
+believes your child has used Theo, write to <a
+href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a>
+and we will act on it.</p>
+<p><strong>Ages 13–17.</strong> Where your app store provides an age
+signal or a parental consent signal — including under the Texas App
+Store Accountability Act and Utah's equivalent — we honour it. We do not
+serve advertising to anyone. We do not sell or share minors' data for
+any purpose. Section 6.5 covers AI safeguards for younger users.</p>
+<p><strong>Higher digital-consent ages.</strong> Several EEA states set
+the age of valid consent above 13 — 16 in Germany, the Netherlands, and
+Ireland among others; 15 in France; 14 in Italy and Spain. If you are
+under your country's threshold, a parent or guardian must consent before
+you use Theo. Have them contact us and we will handle it.</p>
+<hr />
+<h2 id="14-changes">14. Changes</h2>
+<p>We will update this Policy when the app or the law changes. The
+version number and Last Updated date at the top always reflect the
+current text.</p>
+<p>For <strong>material</strong> changes — a new AI provider, a new
+category of data, a new purpose, or any new disclosure of your data — we
+will notify you in the app before the change takes effect, and where the
+change concerns data processed on your consent, we will ask for fresh
+consent rather than assuming continued use implies it. Superseded
+versions are archived and available on request.</p>
+<hr />
+<h2 id="15-contact">15. Contact</h2>
+<p><strong>Privacy questions, rights requests, and complaints:</strong>
+<a
+href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a></p>
+<p>We answer within 30 days. If you are unsatisfied with our response,
+Section 12 lists the regulator for your region, and you may complain to
+them directly at any time — you do not need our permission and you do
+not need to come to us first.</p>
+<hr />
+<h2 id="app-details">App Details</h2>
+<table>
+<tbody>
+<tr>
+<td><strong>App Name</strong></td>
+<td>Theo | Bible Study Lock</td>
+</tr>
+<tr>
+<td><strong>Apple ID</strong></td>
+<td>6760088556</td>
+</tr>
+<tr>
+<td><strong>Bundle ID</strong></td>
+<td>com.biblelock.app</td>
+</tr>
+<tr>
+<td><strong>Developer</strong></td>
+<td>Landslide Studios LLC</td>
+</tr>
+<tr>
+<td><strong>Subscriptions</strong></td>
+<td>com.biblelock.annual, com.biblelock.monthly</td>
+</tr>
+<tr>
+<td><strong>Policy version</strong></td>
+<td>2.0 — August 31, 2026</td>
+</tr>
+</tbody>
+</table>
+<footer>Landslide Studios LLC &middot; Theo &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="consumer-health-data.html">Consumer Health Data</a> &middot; <a href="mailto:tommy@landslidestudios.com">tommy@landslidestudios.com</a></footer>
 </div>
 </body>
 </html>
